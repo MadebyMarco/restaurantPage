@@ -1,0 +1,24 @@
+{
+  "name": "restaurantpage",
+  "version": "1.0.0",
+  "description": "Odin project. Creating a restaurant page and dynamically rendering a single page. I will practice using Javascript  alone to create the entire contents of the website.",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadebyMarco/restaurantPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadebyMarco/restaurantPage/issues"
+  },
+  "homepage": "https://github.com/MadebyMarco/restaurantPage#readme",
+  "devDependencies": {
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
