@@ -6,17 +6,18 @@ module.exports = {
     index: './src/index.js',
     homePage: './src/homePage.js',
     menuPage: './src/menuPage.js',
-    contactPage: './src/contactPage.js'
+    contactPage: './src/contactPage.js',
+    initialPageLoading: './src/initialPageLoading.js'
   }
-  // ,
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     title: 'Restaurant Page',
-  //   }),
-  // ]
+  ,
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Restaurant Page',
+    }),
+  ]
   ,
   output: {
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
