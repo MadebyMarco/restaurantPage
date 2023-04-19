@@ -60,6 +60,9 @@ const myPage = (() => {
         
         const about = document.createElement("div");
         about.textContent = "About";
+        const aboutDescription = document.createElement("div");
+        aboutDescription.textContent = "Monday: 5am - 12am Tuesday: 5am - 12am Wednesday: 5am - 12am Thursday: 5am - 12am Friday: 5am - 12am Saturday: 5am - 12am Sunday: 5am - 12am";
+        about.appendChild(aboutDescription);
         
         const hours = document.createElement("div");
         hours.textContent = "Hours";
@@ -76,6 +79,11 @@ const myPage = (() => {
         document.querySelector("#content").appendChild(mainElement);
     }    
 
+    function clearContent() {
+        const contentItems = document.querySelectorAll("#content > *");
+        contentItems.forEach(item => item.remove());
+    }
+
     function loadDefault() {
 
         createNavBar();
@@ -85,9 +93,11 @@ const myPage = (() => {
     }
 
     return {
-        loadDefault
+        loadDefault,
+        clearContent
     }
 })();
     
     
 export default myPage;
+
