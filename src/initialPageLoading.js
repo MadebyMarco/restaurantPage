@@ -76,17 +76,18 @@ const myPage = (() => {
         document.querySelector("#content").appendChild(mainElement);
     }    
 
+    function loadDefault() {
+
+        createNavBar();
+        createHeading("Heading test");
+        createContentDiv();
+        createMain();
+    }
+
     return {
-        createNavBar,
-        createHeading,
-        createContentDiv,
-        createMain
+        loadDefault
     }
 })();
     
-    myPage.createNavBar();
-    myPage.createHeading("Heading test");
-    myPage.createContentDiv();
-    myPage.createMain();
     
 export default myPage;
