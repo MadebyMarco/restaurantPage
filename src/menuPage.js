@@ -8,7 +8,7 @@ const menuPage = (() => {
     
     
 
-    return createMain;
+    return {createMain};
 
 
 
