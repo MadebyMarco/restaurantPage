@@ -14,6 +14,10 @@
 //         <div class="location">Location</div>
 //     </main>
 //   </body>
+
+import { createHomePage } from "./homePage";
+import { menuPage }   from "./menuPage"
+
 const myPage = (() => {
 
     function createContentDiv() {
@@ -84,9 +88,32 @@ const myPage = (() => {
         contentItems.forEach(item => item.remove());
     }
 
-    function loadDefault() {
+    
+    function addEventListenersToNavButtons() {
+        
+        const homeButton = document.querySelector(".nav > button");
+        
+        homeButton.addEventListener("click", () => {
+            console.log("first button work");
+            myPage.clearContent();
+            createHomePage();
+        });
+        
+        const menuButton = document.querySelector(".nav > button:nth-child(2)");
+        
+        menuButton.addEventListener("click", () => {
+            console.log("second button work");
+            myPage.clearContent();
+            menuPage.createMain();
+        });
+        
+        const lastButton = document.querySelector(".nav > button:last-child");
+        lastButton.addEventListener("click", () => console.log("last button works too"));
+    }
 
+    function loadDefault() {
         createNavBar();
+        addEventListenersToNavButtons();
         createHeading("Heading test");
         createContentDiv();
         createMain();
