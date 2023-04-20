@@ -104,7 +104,7 @@ const myPage = (() => {
         menuButton.addEventListener("click", () => {
             console.log("second button work");
             myPage.clearContent();
-            menuPage.createMain();
+            menuPage.load();
         });
         
         const lastButton = document.querySelector(".nav > button:last-child");
@@ -114,7 +114,7 @@ const myPage = (() => {
     function loadDefault() {
         createNavBar();
         addEventListenersToNavButtons();
-        createHeading("Heading test");
+        createHeading("Marco's Italian Medallion");
         createContentDiv();
         createMain();
     }
