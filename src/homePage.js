@@ -18,9 +18,11 @@ const homePage = (()=> {
     
     function createAbout() {
         const about = document.createElement("div");
-        about.textContent = "About";
+        const heading = document.createElement("h1");
+        heading.textContent = "ABOUT";
+        about.appendChild(heading)
         const aboutDescription = document.createElement("div");
-        aboutDescription.textContent = "The Italian Stallion  Test";
+        aboutDescription.textContent = "Opened by an old italian man who traversed the world on one leg and with minimal speaking ability. Instead of communicating his feelings through words, he cooked. He learned. He loved. Now, he serves. Welcome to his prized possesion.";
         about.appendChild(aboutDescription);
 
         appendChildToMainElement(about);
@@ -28,7 +30,10 @@ const homePage = (()=> {
 
     function createHours() {
         const hours = document.createElement("div");
-        hours.textContent = "Hours";
+        const heading = document.createElement("h1");
+        heading.textContent = "HOURS";
+        hours.appendChild(heading)
+
         const hoursUnorderedList = document.createElement("ul");
         const createHoursListItems = () => {
             for(let i = 0; i < 5; i++) {
@@ -73,7 +78,31 @@ const homePage = (()=> {
 
     function createLocation() {
         const location = document.createElement("div");
-        location.textContent = "Locations";
+        const heading = document.createElement("h1");
+        heading.textContent = "LOCATIONS";
+        location.appendChild(heading)
+
+        const locationMilan = document.createElement("div");
+
+        const locationIcon = document.createElement("img");
+        locationIcon.setAttribute("src", "TBD");
+        locationMilan.appendChild(locationIcon);
+        location.appendChild(locationMilan);
+
+        const locationMilanHeading = document.createElement("div");
+        locationMilanHeading.textContent = "Via Roma 202, 34346 Cesano Boscone MI, Italy"
+        locationMilan.appendChild(locationMilanHeading);
+
+        const locationRome = document.createElement("div");
+
+        const locationIconRome = document.createElement("img");
+        locationIconRome.setAttribute("src", "TBD");
+        locationRome.appendChild(locationIconRome);
+        location.appendChild(locationRome);
+
+        const locationRomeHeading = document.createElement("div");
+        locationRomeHeading.textContent = "Via di Villa Lauchli, 9, 12345 Roma RM, Italy"
+        locationRome.appendChild(locationRomeHeading);
         appendChildToMainElement(location);
     }
     
