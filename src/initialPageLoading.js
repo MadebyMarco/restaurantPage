@@ -61,13 +61,28 @@ const myPage = (() => {
         
         const heroImageContainer = document.createElement("div");
         heroImageContainer.classList.add("heroImage")
+        mainElement.appendChild(heroImageContainer);
+
+        document.querySelector("#content").appendChild(mainElement);
         
+    }   
+    
+    function appendChildToMainElement(child) {
+        return document.querySelector("main").appendChild(child);
+    }
+
+    
+    function createAbout() {
         const about = document.createElement("div");
         about.textContent = "About";
         const aboutDescription = document.createElement("div");
-        aboutDescription.textContent = "To be decided";
+        aboutDescription.textContent = "The Italian Stallion  Test";
         about.appendChild(aboutDescription);
-        
+
+        appendChildToMainElement(about);
+    } 
+
+    function createHours() {
         const hours = document.createElement("div");
         hours.textContent = "Hours";
         const hoursUnorderedList = document.createElement("ul");
@@ -106,20 +121,17 @@ const myPage = (() => {
             }
         } 
         createHoursListItems();
+
         hours.appendChild(hoursUnorderedList);
 
+        appendChildToMainElement(hours);
+    }
 
+    function createLocation() {
         const location = document.createElement("div");
         location.textContent = "Locations";
-        
-        
-        mainElement.appendChild(heroImageContainer);
-        mainElement.appendChild(about);
-        mainElement.appendChild(hours);
-        mainElement.appendChild(location);
-        
-        document.querySelector("#content").appendChild(mainElement);
-    }    
+        appendChildToMainElement(location);
+    }
 
     function clearContent() {
         const contentItems = document.querySelectorAll("#content > *");
@@ -155,6 +167,9 @@ const myPage = (() => {
         createHeading("Marco's Italian Medallion");
         createContentDiv();
         createMain();
+        createAbout();
+        createHours();
+        createLocation();
     }
 
     return {
