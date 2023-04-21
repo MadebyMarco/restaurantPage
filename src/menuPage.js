@@ -180,12 +180,56 @@ const menuPage = (() => {
         getMain().appendChild(container);
 
     } 
+
+    const createDrinks = () => {
+        const container = document.createElement("div");
+        const heading = document.createElement("h1");
+        heading.textContent = "DRINKS";
+        const unorderedList = document.createElement("ul");
+        const createListItems = () => {
+            for(let i = 0; i < 5; i++) {
+                const item = document.createElement("li");
+
+                switch (i) {
+                    case 0:
+                        item.textContent = "Espresso";
+                        break;
+                    case 1:
+                        item.textContent = "Cappucino";
+                        break;
+                    case 2:
+                        item.textContent = "Limonata";
+                        break;
+                    case 3:
+                        item.textContent = "Negroni";
+                        break;
+                    case 4:
+                        item.textContent = "Prosecco";
+                        break;
+                
+                    default: console.log("error with list items");
+                        break;
+                }
+                
+                unorderedList.appendChild(item);
+            }
+        } 
+        createListItems();
+
+        container.appendChild(heading);
+        container.appendChild(unorderedList);
+
+        getMain().appendChild(container);
+
+    } 
+
     const load = () => {
         createMain();
         createAntipasti();
         createPrimi();
         createSecondi();
         createDolci();
+        createDrinks();
     }
     
 
