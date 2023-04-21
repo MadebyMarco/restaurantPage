@@ -65,19 +65,19 @@ const menuPage = (() => {
 
                 switch (i) {
                     case 0:
-                        item.textContent = "Italian Bread";
+                        item.textContent = "Ribollita";
                         break;
                     case 1:
-                        item.textContent = "Asparagus";
+                        item.textContent = "Pasta e Fagioli";
                         break;
                     case 2:
-                        item.textContent = "Roasted Eggplant Spread";
+                        item.textContent = "Gnocchi di Patate al Ragu";
                         break;
                     case 3:
-                        item.textContent = "Beef Spiedini";
+                        item.textContent = "Pappardelle al Coniglio";
                         break;
                     case 4:
-                        item.textContent = "Focaccia Barese";
+                        item.textContent = "Risotto ai Carciofi";
                         break;
                 
                     default: console.log("error with list items");
@@ -107,19 +107,19 @@ const menuPage = (() => {
 
                 switch (i) {
                     case 0:
-                        item.textContent = "Italian Bread";
+                        item.textContent = "Trippa Alla Fiorentina";
                         break;
                     case 1:
-                        item.textContent = "Asparagus";
+                        item.textContent = "Peposo";
                         break;
                     case 2:
-                        item.textContent = "Roasted Eggplant Spread";
+                        item.textContent = "Tagliata Rucola e Parmigiano";
                         break;
                     case 3:
-                        item.textContent = "Beef Spiedini";
+                        item.textContent = "Cinghiale Dolce-Forte";
                         break;
                     case 4:
-                        item.textContent = "Focaccia Barese";
+                        item.textContent = "Bistecca Alla Fiorentina";
                         break;
                 
                     default: console.log("error with list items");
@@ -150,19 +150,19 @@ const menuPage = (() => {
 
                 switch (i) {
                     case 0:
-                        item.textContent = "Italian Bread";
+                        item.textContent = "Tiramisu";
                         break;
                     case 1:
-                        item.textContent = "Asparagus";
+                        item.textContent = "Panna cotta";
                         break;
                     case 2:
-                        item.textContent = "Roasted Eggplant Spread";
+                        item.textContent = "Gelato misto";
                         break;
                     case 3:
-                        item.textContent = "Beef Spiedini";
+                        item.textContent = "Cannoli";
                         break;
                     case 4:
-                        item.textContent = "Focaccia Barese";
+                        item.textContent = "Biscottini";
                         break;
                 
                     default: console.log("error with list items");
@@ -183,6 +183,9 @@ const menuPage = (() => {
     const load = () => {
         createMain();
         createAntipasti();
+        createPrimi();
+        createSecondi();
+        createDolci();
     }
     
 
