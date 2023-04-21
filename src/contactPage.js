@@ -1,6 +1,6 @@
 
 console.log("test");
-const myContactPage = (() => {
+const contactPage = (() => {
     const createMain = () => {
         
     }

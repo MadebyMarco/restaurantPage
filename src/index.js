@@ -1,6 +1,6 @@
-import myPage from "./initialPageLoading";
+import initialPage from "./initialPageLoading";
 
-myPage.loadDefault();
+initialPage.load();
 
 
 

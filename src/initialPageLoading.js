@@ -18,7 +18,7 @@
 import {homePage} from "./homePage";
 import { menuPage }   from "./menuPage"
 
-const myPage = (() => {
+const initialPage = (() => {
 
     function createContentDiv() {
         const content = document.createElement("div");
@@ -68,7 +68,7 @@ const myPage = (() => {
         
         homeButton.addEventListener("click", () => {
             console.log("first button work");
-            myPage.clearContent();
+            initialPage.clearContent();
             homePage.load();
         });
         
@@ -76,7 +76,7 @@ const myPage = (() => {
         
         menuButton.addEventListener("click", () => {
             console.log("second button work");
-            myPage.clearContent();
+            initialPage.clearContent();
             menuPage.load();
         });
         
@@ -84,7 +84,7 @@ const myPage = (() => {
         lastButton.addEventListener("click", () => console.log("last button works too"));
     }
 
-    function loadDefault() {
+    function load() {
         createNavBar();
         addEventListenersToNavButtons();
         createHeading("Marco's Italian Medallion");
@@ -93,11 +93,11 @@ const myPage = (() => {
     }
 
     return {
-        loadDefault,
+        load,
         clearContent
     }
 })();
     
     
-export default myPage;
+export default initialPage;
 
