@@ -15,7 +15,7 @@
 //     </main>
 //   </body>
 
-import { createHomePage } from "./homePage";
+import {homePage} from "./homePage";
 import { menuPage }   from "./menuPage"
 
 const myPage = (() => {
@@ -56,82 +56,83 @@ const myPage = (() => {
         document.body.appendChild(heading);
     }    
     
-    function createMain() {
-        const mainElement = document.createElement("main");
+    // function createMain() {
+    //     const mainElement = document.createElement("main");
         
-        const heroImageContainer = document.createElement("div");
-        heroImageContainer.classList.add("heroImage")
-        mainElement.appendChild(heroImageContainer);
+    //     const heroImageContainer = document.createElement("div");
+    //     heroImageContainer.classList.add("heroImage")
+    //     mainElement.appendChild(heroImageContainer);
 
-        document.querySelector("#content").appendChild(mainElement);
+    //     document.querySelector("#content").appendChild(mainElement);
         
-    }   
+    // }   
     
-    function appendChildToMainElement(child) {
-        return document.querySelector("main").appendChild(child);
-    }
+    // function appendChildToMainElement(child) {
+    //     return document.querySelector("main").appendChild(child);
+    // }
 
     
-    function createAbout() {
-        const about = document.createElement("div");
-        about.textContent = "About";
-        const aboutDescription = document.createElement("div");
-        aboutDescription.textContent = "The Italian Stallion  Test";
-        about.appendChild(aboutDescription);
+    // function createAbout() {
+    //     const about = document.createElement("div");
+    //     about.textContent = "About";
+    //     const aboutDescription = document.createElement("div");
+    //     aboutDescription.textContent = "The Italian Stallion  Test";
+    //     about.appendChild(aboutDescription);
 
-        appendChildToMainElement(about);
-    } 
+    //     appendChildToMainElement(about);
+    // } 
 
-    function createHours() {
-        const hours = document.createElement("div");
-        hours.textContent = "Hours";
-        const hoursUnorderedList = document.createElement("ul");
-        const createHoursListItems = () => {
-            for(let i = 0; i < 5; i++) {
-                const item = document.createElement("li");
+    // function createHours() {
+    //     const hours = document.createElement("div");
+    //     hours.textContent = "Hours";
+    //     const hoursUnorderedList = document.createElement("ul");
+    //     const createHoursListItems = () => {
+    //         for(let i = 0; i < 5; i++) {
+    //             const item = document.createElement("li");
 
-                switch (i) {
-                    case 0:
-                        item.textContent = "Monday: 5am - 12pm ";
-                        break;
-                    case 1:
-                        item.textContent = "Tuesday: 5am - 12pm" ;
-                        break;
-                    case 2:
-                        item.textContent = "Wednesday: 5am - 12pm";
-                        break;
-                    case 3:
-                        item.textContent = "Thursday: 5am - 12pm ";
-                        break;
-                    case 4:
-                        item.textContent = "Friday: 5am - 12pm";
-                        break;
-                    case 5:
-                        item.textContent = "Saturday: 5am - 12pm";
-                        break;
-                    case 6:
-                        item.textContent = "Sunday: 5am - 12pm";
-                        break;
+    //             switch (i) {
+    //                 case 0:
+    //                     item.textContent = "Monday: 5am - 12pm ";
+    //                     break;
+    //                 case 1:
+    //                     item.textContent = "Tuesday: 5am - 12pm" ;
+    //                     break;
+    //                 case 2:
+    //                     item.textContent = "Wednesday: 5am - 12pm";
+    //                     break;
+    //                 case 3:
+    //                     item.textContent = "Thursday: 5am - 12pm ";
+    //                     break;
+    //                 case 4:
+    //                     item.textContent = "Friday: 5am - 12pm";
+    //                     break;
+    //                 case 5:
+    //                     item.textContent = "Saturday: 5am - 12pm";
+    //                     break;
+    //                 case 6:
+    //                     item.textContent = "Sunday: 5am - 12pm";
+    //                     break;
                 
-                    default: console.log("error with list items");
-                        break;
-                }
+    //                 default: console.log("error with list items");
+    //                     break;
+    //             }
                 
-                hoursUnorderedList.appendChild(item);
-            }
-        } 
-        createHoursListItems();
+    //             hoursUnorderedList.appendChild(item);
+    //         }
+    //     } 
+    //     createHoursListItems();
 
-        hours.appendChild(hoursUnorderedList);
+    //     hours.appendChild(hoursUnorderedList);
 
-        appendChildToMainElement(hours);
-    }
+    //     appendChildToMainElement(hours);
+    // }
 
-    function createLocation() {
-        const location = document.createElement("div");
-        location.textContent = "Locations";
-        appendChildToMainElement(location);
-    }
+    // function createLocation() {
+    //     const location = document.createElement("div");
+    //     location.textContent = "Locations";
+    //     appendChildToMainElement(location);
+    // }
+
 
     function clearContent() {
         const contentItems = document.querySelectorAll("#content > *");
@@ -146,7 +147,7 @@ const myPage = (() => {
         homeButton.addEventListener("click", () => {
             console.log("first button work");
             myPage.clearContent();
-            createHomePage();
+            homePage.load();
         });
         
         const menuButton = document.querySelector(".nav > button:nth-child(2)");
@@ -166,10 +167,7 @@ const myPage = (() => {
         addEventListenersToNavButtons();
         createHeading("Marco's Italian Medallion");
         createContentDiv();
-        createMain();
-        createAbout();
-        createHours();
-        createLocation();
+        homePage.load();
     }
 
     return {
