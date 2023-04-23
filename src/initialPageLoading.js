@@ -17,6 +17,7 @@
 
 import {homePage} from "./homePage";
 import { menuPage }   from "./menuPage"
+import { contactPage } from "./contactPage";
 
 const initialPage = (() => {
 
@@ -80,8 +81,12 @@ const initialPage = (() => {
             menuPage.load();
         });
         
-        const lastButton = document.querySelector(".nav > button:last-child");
-        lastButton.addEventListener("click", () => console.log("last button works too"));
+        const contactButton = document.querySelector(".nav > button:last-child");
+        contactButton.addEventListener("click", () => {
+            console.log("last button works too");
+            initialPage.clearContent();
+            contactPage.load();
+        });
     }
 
     function load() {
