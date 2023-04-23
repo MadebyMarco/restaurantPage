@@ -2,12 +2,11 @@ const menuPage = (() => {
 
     const createMain = () => {
         const mainElement = document.createElement("main");
-        mainElement.classList.add("menu");
         document.querySelector("#content").appendChild(mainElement);
     }
 
     const getMain = () => {
-        return document.querySelector(".menu");
+        return document.querySelector("main");
     }
     
     const createAntipasti = () => {
@@ -243,4 +242,3 @@ export {menuPage};
 // Appetizers
 // Main dishes
 // Drinks
-// 
