@@ -1,3 +1,6 @@
+import phoneIconPng from "./Icons/phoneIcon.png";
+import emailIconPng from "./Icons/emailIcon.png";
+
 
 console.log("test");
 const contactPage = (() => {
@@ -16,7 +19,8 @@ const contactPage = (() => {
         const numberContact = document.createElement("div");
         const number = document.createElement("div");
         const phoneIcon = document.createElement("img");
-        phoneIcon.setAttribute("src", "TBD");
+        phoneIcon.setAttribute("src", phoneIconPng);
+        phoneIcon.classList.add("icon");
         number.textContent = "+39339957495";
 
         numberContact.appendChild(phoneIcon);
@@ -27,7 +31,8 @@ const contactPage = (() => {
         const email = document.createElement("div")
         email.textContent = "fakeItalianEmail@gitaly.com"
         const emailIcon = document.createElement("img")
-        emailIcon.setAttribute("src", "TBD");
+        emailIcon.setAttribute("src", emailIconPng);
+        emailIcon.classList.add("icon");
 
         emailContact.appendChild(emailIcon);
         emailContact.appendChild(email);
