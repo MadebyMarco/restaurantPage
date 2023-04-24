@@ -1,0 +1,45 @@
+:root {
+    --accent-color: teal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    row-gap: 15px;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+    padding-top: 15px; 
+}
+
+.nav button {
+    padding: 15px 50px;
+    outline: transparent;
+    border: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.nav button:active {
+    border: 2px solid white;
+    outline: var(--accent-color) solid 3px;
+    box-shadow: inset 1000px 0px 10px rgba(0,0,0, 0.1);
+}
+
+.heading {
+    font-size: 50px;
+}
