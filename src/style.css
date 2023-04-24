@@ -1,3 +1,38 @@
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url('./Fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url('./Fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Oxygen";
+    src: url('./Fonts/Oxygen/Oxygen-Light.ttf') format("truetype");
+    font-weight: 300;
+    font-style: light;
+
+}
+@font-face {
+    font-family: "Oxygen";
+    src: url('./Fonts/Oxygen/Oxygen-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oxygen";
+    src: url('./Fonts/Oxygen/Oxygen-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: bold;
+}
+
 :root {
     --accent-color: teal;
 }
@@ -42,4 +77,6 @@ body {
 
 .heading {
     font-size: 50px;
+    font-family: "Libre Baskerville";
+    font-weight: 700;
 }
