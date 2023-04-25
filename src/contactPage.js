@@ -17,6 +17,7 @@ const contactPage = (() => {
         container.appendChild(header);
 
         const numberContact = document.createElement("div");
+        numberContact.classList.add("iconAndInfo");
         const number = document.createElement("div");
         const phoneIcon = document.createElement("img");
         phoneIcon.setAttribute("src", phoneIconPng);
@@ -28,6 +29,8 @@ const contactPage = (() => {
         container.appendChild(numberContact);
 
         const emailContact = document.createElement("div");
+        emailContact.classList.add("iconAndInfo");
+
         const email = document.createElement("div")
         email.textContent = "fakeItalianEmail@gitaly.com"
         const emailIcon = document.createElement("img")

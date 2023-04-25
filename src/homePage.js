@@ -86,6 +86,7 @@ const homePage = (()=> {
         location.appendChild(heading)
 
         const locationMilan = document.createElement("div");
+        locationMilan.classList.add("iconAndInfo");
 
         const locationIcon = document.createElement("img");
         locationIcon.setAttribute("src", locationIconPng);
@@ -97,6 +98,7 @@ const homePage = (()=> {
         locationMilan.appendChild(locationMilanHeading);
 
         const locationRome = document.createElement("div");
+        locationRome.classList.add("iconAndInfo");
 
         const locationIconRome = document.createElement("img");
         locationIconRome.setAttribute("src", locationIconPng);
