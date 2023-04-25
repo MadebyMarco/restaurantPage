@@ -6,6 +6,7 @@ const homePage = (()=> {
 
     function createMain() {
         const mainElement = document.createElement("main");
+        mainElement.classList.add("homePage");
         
         const heroImageContainer = document.createElement("div");
         heroImageContainer.classList.add("heroImage")

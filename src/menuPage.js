@@ -2,6 +2,7 @@ const menuPage = (() => {
 
     const createMain = () => {
         const mainElement = document.createElement("main");
+        mainElement.classList.add("menuPage");
         document.querySelector("#content").appendChild(mainElement);
     }
 

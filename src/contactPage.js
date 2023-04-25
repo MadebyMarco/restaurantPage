@@ -7,6 +7,7 @@ console.log("test");
 const contactPage = (() => {
     const createMain = () => {
         const mainElement = document.createElement("main");
+        mainElement.classList.add("contactPage");
         return mainElement
     }
 
