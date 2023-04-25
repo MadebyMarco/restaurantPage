@@ -3,6 +3,7 @@ import emailIconPng from "./Icons/emailIcon.png";
 
 
 console.log("test");
+
 const contactPage = (() => {
     const createMain = () => {
         const mainElement = document.createElement("main");
@@ -46,9 +47,10 @@ const contactPage = (() => {
     }
 
     const load = () => {
-        const content = document.querySelector("#content");
-        content.appendChild(createMain());
-        content.appendChild(createContact());
+        const container = document.querySelector("#content");
+        container.appendChild(createMain());
+        const main = document.querySelector("main");
+        main.appendChild(createContact());
     }
 
     return {load};
