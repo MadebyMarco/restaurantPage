@@ -36,6 +36,10 @@
 :root {
     --accent-color: teal;
 }
+* {
+    box-sizing: border-box;
+    font-family: "Oxygen";
+}
 
 html, body {
     height: 100%;
@@ -49,18 +53,40 @@ body {
     align-items: center;
 }
 
+
+main > * {
+    margin: 0px 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 30px 0;
+}
+
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 10%;
-    padding-top: 15px; 
+    padding-top: 100px; 
 }
 
 .nav button {
     padding: 15px 50px;
     outline: transparent;
-    border: transparent;
+    border: 2px solid transparent;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 600;
@@ -78,5 +104,34 @@ body {
 .heading {
     font-size: 50px;
     font-family: "Libre Baskerville";
-    font-weight: 700;
+    font-weight: 400;
+    margin: 100px 0;
+}
+
+.iconAndInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.menuPage > div:last-child {
+    margin-bottom: 100px;
+}
+
+.menuPage {
+    display: grid;
+    gap: 20px;
+}
+
+.homePage > div:nth-child(3) {
+    margin: 100px 0;
+}
+.homePage > div:nth-child(4) {
+    margin-bottom: 100px;
+
+}
+
+button.highlight{
+    background-color: rgb(3, 189, 189);
 }

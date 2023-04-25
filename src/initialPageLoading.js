@@ -35,6 +35,7 @@ const initialPage = (() => {
         
         const navButtonHome = document.createElement("button");
         navButtonHome.textContent = "Home";
+        navButtonHome.classList.add("highlight");
         
         const navButtonMenu = document.createElement("button");
         navButtonMenu.textContent = "Menu";
@@ -48,6 +49,18 @@ const initialPage = (() => {
         
         document.body.appendChild(navBar);
     }    
+    const navButtons = () => document.querySelectorAll(".nav button");
+    
+
+    function highlightButton(e) {
+        e.target.classList.add("highlight");
+        console.log(navButtons());
+        
+    }
+
+    function removeHighlightsFromButtons() {
+        navButtons().forEach(button => button.classList.remove("highlight"));
+    }
     
     function createHeading(headingContent) {
         const heading = document.createElement("div");
@@ -67,25 +80,31 @@ const initialPage = (() => {
         
         const homeButton = document.querySelector(".nav > button");
         
-        homeButton.addEventListener("click", () => {
+        homeButton.addEventListener("click", (e) => {
             console.log("first button work");
             initialPage.clearContent();
             homePage.load();
+            removeHighlightsFromButtons();
+            highlightButton(e);
         });
         
         const menuButton = document.querySelector(".nav > button:nth-child(2)");
         
-        menuButton.addEventListener("click", () => {
+        menuButton.addEventListener("click", (e) => {
             console.log("second button work");
             initialPage.clearContent();
             menuPage.load();
+            removeHighlightsFromButtons();
+            highlightButton(e);
         });
         
         const contactButton = document.querySelector(".nav > button:last-child");
-        contactButton.addEventListener("click", () => {
+        contactButton.addEventListener("click", (e) => {
             console.log("last button works too");
             initialPage.clearContent();
             contactPage.load();
+            removeHighlightsFromButtons();
+            highlightButton(e);
         });
     }
 
