@@ -1,3 +1,6 @@
+import locationIconPng from "./Icons/locationIcon.png";
+
+
 const homePage = (()=> {
 
 
@@ -85,7 +88,7 @@ const homePage = (()=> {
         const locationMilan = document.createElement("div");
 
         const locationIcon = document.createElement("img");
-        locationIcon.setAttribute("src", "TBD");
+        locationIcon.setAttribute("src", locationIconPng);
         locationMilan.appendChild(locationIcon);
         location.appendChild(locationMilan);
 
@@ -96,7 +99,7 @@ const homePage = (()=> {
         const locationRome = document.createElement("div");
 
         const locationIconRome = document.createElement("img");
-        locationIconRome.setAttribute("src", "TBD");
+        locationIconRome.setAttribute("src", locationIconPng);
         locationRome.appendChild(locationIconRome);
         location.appendChild(locationRome);
 
