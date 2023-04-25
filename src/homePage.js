@@ -21,9 +21,10 @@ const homePage = (()=> {
     
     function createAbout() {
         const about = document.createElement("div");
+        about.classList.add("aboutSection");
         const heading = document.createElement("h1");
         heading.textContent = "ABOUT";
-        about.appendChild(heading)
+        about.appendChild(heading);
         const aboutDescription = document.createElement("div");
         aboutDescription.textContent = "Opened by an old italian man who traversed the world on one leg and with minimal speaking ability. Instead of communicating his feelings through words, he cooked. He learned. He loved. Now, he serves. Welcome to his prized possesion.";
         about.appendChild(aboutDescription);
