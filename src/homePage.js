@@ -1,5 +1,5 @@
 import locationIconPng from "./Icons/locationIcon.png";
-
+import italy from "./Images/reuben-teo-XvxFqD3uUEk-unsplash.jpg";
 
 const homePage = (()=> {
 
@@ -8,9 +8,16 @@ const homePage = (()=> {
         const mainElement = document.createElement("main");
         mainElement.classList.add("homePage");
         
-        const heroImageContainer = document.createElement("div");
-        heroImageContainer.classList.add("heroImage")
-        mainElement.appendChild(heroImageContainer);
+        const heroImage = document.createElement("img");
+        heroImage.classList.add("heroImage");
+        heroImage.setAttribute("src", italy);
+        heroImage.setAttribute("alt", "italian fields with large estate");
+        
+        const heroImageCredit = document.createElement("span");
+        heroImageCredit.textContent = "Published on Unsplash by Ruben Teo";
+        
+        mainElement.appendChild(heroImage);
+        mainElement.appendChild(heroImageCredit);
 
         document.querySelector("#content").appendChild(mainElement);
         
@@ -92,6 +99,7 @@ const homePage = (()=> {
 
         const locationIcon = document.createElement("img");
         locationIcon.setAttribute("src", locationIconPng);
+        locationIcon.classList.add("icon");
         locationMilan.appendChild(locationIcon);
         location.appendChild(locationMilan);
 
@@ -104,6 +112,7 @@ const homePage = (()=> {
 
         const locationIconRome = document.createElement("img");
         locationIconRome.setAttribute("src", locationIconPng);
+        locationIconRome.classList.add("icon");
         locationRome.appendChild(locationIconRome);
         location.appendChild(locationRome);
 
