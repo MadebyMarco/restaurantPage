@@ -1,16 +1,16 @@
 const menuPage = (() => {
 
-    const createMain = () => {
+    const _createMain = () => {
         const mainElement = document.createElement("main");
         mainElement.classList.add("menuPage");
         document.querySelector("#content").appendChild(mainElement);
     }
 
-    const getMain = () => {
+    const _getMain = () => {
         return document.querySelector("main");
     }
     
-    const createAntipasti = () => {
+    const _createAntipasti = () => {
         const container = document.createElement("div");
         const heading = document.createElement("h1");
         heading.textContent = "ANTIPASTI";
@@ -48,13 +48,13 @@ const menuPage = (() => {
         container.appendChild(heading);
         container.appendChild(unorderedList);
 
-        getMain().appendChild(container);
+        _getMain().appendChild(container);
 
     }
 
 
 
-     const createPrimi = () => {
+     const _createPrimi = () => {
         const container = document.createElement("div");
         const heading = document.createElement("h1");
         heading.textContent = "PRIMI";
@@ -92,11 +92,11 @@ const menuPage = (() => {
         container.appendChild(heading);
         container.appendChild(unorderedList);
 
-        getMain().appendChild(container);
+        _getMain().appendChild(container);
 
     }
 
-    const createSecondi = () => {
+    const _createSecondi = () => {
         const container = document.createElement("div");
         const heading = document.createElement("h1");
         heading.textContent = "SECONDI";
@@ -134,12 +134,12 @@ const menuPage = (() => {
         container.appendChild(heading);
         container.appendChild(unorderedList);
 
-        getMain().appendChild(container);
+        _getMain().appendChild(container);
 
     } 
 
 
-    const createDolci = () => {
+    const _createDolci = () => {
         const container = document.createElement("div");
         const heading = document.createElement("h1");
         heading.textContent = "DOLCI";
@@ -177,11 +177,11 @@ const menuPage = (() => {
         container.appendChild(heading);
         container.appendChild(unorderedList);
 
-        getMain().appendChild(container);
+        _getMain().appendChild(container);
 
     } 
 
-    const createDrinks = () => {
+    const _createDrinks = () => {
         const container = document.createElement("div");
         const heading = document.createElement("h1");
         heading.textContent = "DRINKS";
@@ -219,17 +219,17 @@ const menuPage = (() => {
         container.appendChild(heading);
         container.appendChild(unorderedList);
 
-        getMain().appendChild(container);
+        _getMain().appendChild(container);
 
     } 
 
     const load = () => {
-        createMain();
-        createAntipasti();
-        createPrimi();
-        createSecondi();
-        createDolci();
-        createDrinks();
+        _createMain();
+        _createAntipasti();
+        _createPrimi();
+        _createSecondi();
+        _createDolci();
+        _createDrinks();
     }
     
 
