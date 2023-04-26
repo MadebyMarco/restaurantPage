@@ -124,14 +124,43 @@ h1 {
     gap: 20px;
 }
 
-.homePage > div:nth-child(3) {
+.homePage {
+    display: grid;
+}
+
+.homePage > div:nth-child(4) {
     margin: 100px 0;
 }
-.homePage > div:nth-child(4) {
+.homePage > div:nth-child(5) {
     margin-bottom: 100px;
 
 }
 
 button.highlight{
     background-color: rgb(3, 189, 189);
+}
+
+img.icon {
+    height: 24px;
+    width: 24px;
+}
+
+.heroImage {
+    width: 1000px;
+    height: 400px;
+    max-width: 100%;
+    justify-self: center;
+    object-fit: none;
+    object-position: 50% 30%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.homePage > span {
+    color: rgba(0,0,0, 0.5);
+}
+.aboutSection {
+    margin-top: 100px;
 }
