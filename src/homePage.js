@@ -4,7 +4,7 @@ import locationIconPng from "./Icons/locationIcon.png";
 const homePage = (()=> {
 
 
-    function createMain() {
+    function _createMain() {
         const mainElement = document.createElement("main");
         mainElement.classList.add("homePage");
         
@@ -20,7 +20,7 @@ const homePage = (()=> {
     }
 
     
-    function createAbout() {
+    function _createAbout() {
         const about = document.createElement("div");
         about.classList.add("aboutSection");
         const heading = document.createElement("h1");
@@ -33,7 +33,7 @@ const homePage = (()=> {
         appendChildToMainElement(about);
     } 
 
-    function createHours() {
+    function _createHours() {
         const hours = document.createElement("div");
         const heading = document.createElement("h1");
         heading.textContent = "HOURS";
@@ -81,7 +81,7 @@ const homePage = (()=> {
         appendChildToMainElement(hours);
     }
 
-    function createLocation() {
+    function _createLocation() {
         const location = document.createElement("div");
         const heading = document.createElement("h1");
         heading.textContent = "LOCATIONS";
@@ -114,10 +114,10 @@ const homePage = (()=> {
     }
     
     function load() {
-        createMain();
-        createAbout();
-        createHours();
-        createLocation();
+        _createMain();
+        _createAbout();
+        _createHours();
+        _createLocation();
     }
 
     return {load}

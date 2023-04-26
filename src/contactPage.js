@@ -5,13 +5,13 @@ import emailIconPng from "./Icons/emailIcon.png";
 console.log("test");
 
 const contactPage = (() => {
-    const createMain = () => {
+    const _createMain = () => {
         const mainElement = document.createElement("main");
         mainElement.classList.add("contactPage");
         return mainElement
     }
 
-    const createContact = () => {
+    const _createContact = () => {
         const container = document.createElement("div");
 
         const header = document.createElement("h1");
@@ -49,9 +49,9 @@ const contactPage = (() => {
 
     const load = () => {
         const container = document.querySelector("#content");
-        container.appendChild(createMain());
+        container.appendChild(_createMain());
         const main = document.querySelector("main");
-        main.appendChild(createContact());
+        main.appendChild(_createContact());
     }
 
     return {load};

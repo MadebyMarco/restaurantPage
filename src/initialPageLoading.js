@@ -21,7 +21,7 @@ import { contactPage } from "./contactPage";
 
 const initialPage = (() => {
 
-    function createContentDiv() {
+    function _createContentDiv() {
         const content = document.createElement("div");
         const body = document.querySelector("body");
         content.id = "content";
@@ -29,7 +29,7 @@ const initialPage = (() => {
     }    
     
     
-    function createNavBar() {
+    function _createNavBar() {
         const navBar = document.createElement("div");
         navBar.classList.add("nav");
         
@@ -52,17 +52,17 @@ const initialPage = (() => {
     const navButtons = () => document.querySelectorAll(".nav button");
     
 
-    function highlightButton(e) {
+    function _highlightButton(e) {
         e.target.classList.add("highlight");
         console.log(navButtons());
         
     }
 
-    function removeHighlightsFromButtons() {
+    function _removeHighlightsFromButtons() {
         navButtons().forEach(button => button.classList.remove("highlight"));
     }
     
-    function createHeading(headingContent) {
+    function _createHeading(headingContent) {
         const heading = document.createElement("div");
         heading.classList.add("heading");
         heading.textContent = `${headingContent}`;
@@ -76,43 +76,44 @@ const initialPage = (() => {
     }
 
     
-    function addEventListenersToNavButtons() {
+    function _addEventListenersToNavButtons() {
         
         const homeButton = document.querySelector(".nav > button");
         
         homeButton.addEventListener("click", (e) => {
-            console.log("first button work");
+            // console.log("first button work");
             initialPage.clearContent();
             homePage.load();
-            removeHighlightsFromButtons();
-            highlightButton(e);
+            _removeHighlightsFromButtons();
+            _highlightButton(e);
         });
         
         const menuButton = document.querySelector(".nav > button:nth-child(2)");
         
         menuButton.addEventListener("click", (e) => {
-            console.log("second button work");
+            // console.log("second button work");
             initialPage.clearContent();
             menuPage.load();
-            removeHighlightsFromButtons();
-            highlightButton(e);
+            _removeHighlightsFromButtons();
+            _highlightButton(e);
         });
         
         const contactButton = document.querySelector(".nav > button:last-child");
+
         contactButton.addEventListener("click", (e) => {
-            console.log("last button works too");
+            // console.log("last button works too");
             initialPage.clearContent();
             contactPage.load();
-            removeHighlightsFromButtons();
-            highlightButton(e);
+            _removeHighlightsFromButtons();
+            _highlightButton(e);
         });
     }
 
     function load() {
-        createNavBar();
-        addEventListenersToNavButtons();
-        createHeading("Marco's Italian Medallion");
-        createContentDiv();
+        _createNavBar();
+        _addEventListenersToNavButtons();
+        _createHeading("Marco's Italian Medallion");
+        _createContentDiv();
         homePage.load();
     }
 
